@@ -36,7 +36,7 @@ public class TweetLinkController {
                         break;
                     }
                 }
-                lstLink.add(new LinkPin(rs.getInt(1), rs.getString(4), img, rs.getString(5), rs.getByte(9)));
+                lstLink.add(new LinkPin(rs.getInt(1), rs.getString(4), img, rs.getString(5),rs.getString(6), rs.getByte(9)));
             }
             connectDB.closeConnectLink();
             return lstLink;

@@ -13,7 +13,8 @@ public class LinkPin {
     private int id;
     private String link;
     private String img;
-    private String note;
+    private String title;
+    private String des;
     private byte checkPin;
 
     public int getId() {
@@ -38,13 +39,32 @@ public class LinkPin {
         this.img = img;
     }
 
-    public LinkPin(int id, String link, String img, String note, byte checkPin) {
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDes() {
+        return des;
+    }
+
+    public void setDes(String des) {
+        this.des = des;
+    }
+
+    public LinkPin(int id, String link, String img, String title, String des, byte checkPin) {
         this.id = id;
         this.link = link;
         this.img = img;
-        this.note = note;
+        this.title = title;
+        this.des = des;
         this.checkPin = checkPin;
     }
+
+
     
     public String getLink() {
         return link;
@@ -62,17 +82,9 @@ public class LinkPin {
         this.img = img;
     }
 
-    public String getNote() {
-        return note;
-    }
-
-    public void setNote(String note) {
-        this.note = note;
-    }
-
     @Override
     public String toString() {
-        return "LinkPin{" + "id=" + id + ", link=" + link + ", img=" + img + ", note=" + note + ", checkPin=" + checkPin + '}';
+        return "LinkPin{" + "id=" + id + ", link=" + link + ", img=" + img + ", title=" + title + ", des=" + des + ", checkPin=" + checkPin + '}';
     }
     
 }
